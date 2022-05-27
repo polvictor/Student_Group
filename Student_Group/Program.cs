@@ -389,15 +389,7 @@ namespace Student_Group
         public void AddStudent(Student new_student) // добавление студента
         {
             Student[] s = this.student;
-            student = new Student[quantitystudent + 1];
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                student[i] = s[i];
-            }
-
             student[quantitystudent] = new_student;
-
             quantitystudent++;
         }
         public void DeleteStudent(int n) // удаление студента
@@ -462,7 +454,7 @@ namespace Student_Group
 
         public void Print()
         {
-            Student[] s = new Student[quantitystudent];
+            Student[] gs = new Student[quantitystudent];
             Group student_list = new Group();
             foreach (Student s in student_list)
                 Console.WriteLine(s.GetSurname() + " " + s.GetName() + " " + s.GetFathername());
